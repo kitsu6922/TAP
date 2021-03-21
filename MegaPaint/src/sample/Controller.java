@@ -41,7 +41,7 @@ public class Controller {
                 }
             }
         });
-        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble");
+        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble","Lluvia de Estrellas");
         cb_opciones.setValue("Limpio");
         cb_opciones.valueProperty().addListener(new ChangeListener() {
             @Override
@@ -183,6 +183,73 @@ public class Controller {
                     context.strokeLine((lienzo.getWidth() / 2) + (medida_x * i), 0, lienzo.getWidth(), medida_y * (i + 1));
                     context.strokeLine((lienzo.getWidth() / 2) - (medida_x * i), lienzo.getHeight(), 0, (lienzo.getHeight()) - (medida_y * (i + 1)));
                     context.strokeLine((lienzo.getWidth() / 2) + (medida_x * i), lienzo.getHeight(), lienzo.getWidth(), (lienzo.getHeight()) - (medida_y * (i + 1)));
+
+                }
+                break;
+            case 7:
+                //lluvia de estrellas
+                medida_x=(lienzo.getWidth()/2)/v;
+                medida_y=(lienzo.getHeight()/2)/v;
+                for(int i=0;i<v;i++) {
+                    //estrellas secundarias
+                    double medida_x2=((lienzo.getWidth()/4))/v;
+                    double medida_y2=((lienzo.getHeight()/4))/v;
+                    //1
+                    context.strokeLine(medida_x2*(i),medida_y2*(i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),(lienzo.getHeight()/4)-(medida_y2*(i+1)));
+                    context.strokeLine(medida_x2*(i),medida_y2*(i),(lienzo.getWidth()/4)-(medida_x2*(i+1)),(lienzo.getHeight()/4)+(medida_y2*(i+1)));
+                    context.strokeLine(medida_x2*(i),((lienzo.getHeight()/2))-(medida_y2*i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),(lienzo.getHeight()/4)+(medida_y2*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/2))-(medida_x2*i),((lienzo.getHeight()/2))-(medida_y2*i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),(lienzo.getHeight()/4)-(medida_y2*(i+1)));
+
+                    context.strokeLine(lienzo.getWidth() / 4, medida_y2 * i, (lienzo.getWidth() / 4) + (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine(lienzo.getWidth() / 4, medida_y2 * i, (lienzo.getWidth() / 4) - (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine(lienzo.getWidth() / 4, (lienzo.getHeight()/2) - (medida_y2 * i), (lienzo.getWidth() / 4) + (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine(lienzo.getWidth() / 4, (lienzo.getHeight()/2) - (medida_y2 * i), (lienzo.getWidth() / 4) - (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    //2
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),medida_y2*(i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),(lienzo.getHeight()/4)-(medida_y2*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),medida_y2*(i),((lienzo.getWidth()/4)*3)-(medida_x2*(i+1)),(lienzo.getHeight()/4)+(medida_y2*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),((lienzo.getHeight()/2))-(medida_y2*i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),(lienzo.getHeight()/4)+(medida_y2*(i+1)));
+                    context.strokeLine(lienzo.getWidth()-(medida_x2*i),((lienzo.getHeight()/2))-(medida_y2*i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),(lienzo.getHeight()/4)-(medida_y2*(i+1)));
+
+                    context.strokeLine((lienzo.getWidth() / 4)*3, medida_y2 * i, ((lienzo.getWidth() / 4)*3) + (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, medida_y2 * i, ((lienzo.getWidth() / 4)*3) - (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, (lienzo.getHeight()/2) - (medida_y2 * i), ((lienzo.getWidth() / 4)*3) + (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, (lienzo.getHeight()/2) - (medida_y2 * i), ((lienzo.getWidth() / 4)*3) - (medida_x2 * (i + 1)), lienzo.getHeight() / 4);
+                    //3
+                    context.strokeLine(medida_x2*(i),(lienzo.getHeight()/2)+medida_y2*(i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)-(medida_y2*(i+1)));
+                    context.strokeLine(medida_x2*(i),(lienzo.getHeight()/2)+medida_y2*(i),(lienzo.getWidth()/4)-(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)+(medida_y2*(i+1)));
+                    context.strokeLine(medida_x2*(i),lienzo.getHeight()-(medida_y2*i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)+(medida_y2*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/2))-(medida_x2*i),lienzo.getHeight()-(medida_y2*i),(lienzo.getWidth()/4)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)-(medida_y2*(i+1)));
+
+                    context.strokeLine(lienzo.getWidth() / 4, (lienzo.getHeight()/2)+medida_y2 * i, (lienzo.getWidth() / 4) + (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine(lienzo.getWidth() / 4, (lienzo.getHeight()/2)+medida_y2 * i, (lienzo.getWidth() / 4) - (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine(lienzo.getWidth() / 4, lienzo.getHeight() - (medida_y2 * i), (lienzo.getWidth() / 4) + (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine(lienzo.getWidth() / 4, lienzo.getHeight() - (medida_y2 * i), (lienzo.getWidth() / 4) - (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    //4
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),(lienzo.getHeight()/2)+medida_y2*(i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)-(medida_y2*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),(lienzo.getHeight()/2)+medida_y2*(i),((lienzo.getWidth()/4)*3)-(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)+(medida_y2*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/2)+medida_x2*(i),lienzo.getHeight()-(medida_y2*i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)+(medida_y2*(i+1)));
+                    context.strokeLine(lienzo.getWidth()-(medida_x2*i),lienzo.getHeight()-(medida_y2*i),((lienzo.getWidth()/4)*3)+(medida_x2*(i+1)),((lienzo.getHeight()/4)*3)-(medida_y2*(i+1)));
+
+                    context.strokeLine((lienzo.getWidth() / 4)*3, (lienzo.getHeight()/2)+medida_y2 * i, ((lienzo.getWidth() / 4)*3) + (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, (lienzo.getHeight()/2)+medida_y2 * i, ((lienzo.getWidth() / 4)*3) - (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, lienzo.getHeight() - (medida_y2 * i), ((lienzo.getWidth() / 4)*3) + (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    context.strokeLine((lienzo.getWidth() / 4)*3, lienzo.getHeight() - (medida_y2 * i), ((lienzo.getWidth() / 4)*3) - (medida_x2 * (i + 1)), (lienzo.getHeight()/4)*3);
+                    //estrella recta
+                    context.strokeLine(lienzo.getWidth() / 2, medida_y * i, (lienzo.getWidth() / 2) + (medida_x * (i + 1)), lienzo.getHeight() / 2);
+                    context.strokeLine(lienzo.getWidth() / 2, medida_y * i, (lienzo.getWidth() / 2) - (medida_x * (i + 1)), lienzo.getHeight() / 2);
+                    context.strokeLine(lienzo.getWidth() / 2, lienzo.getHeight() - (medida_y * i), (lienzo.getWidth() / 2) + (medida_x * (i + 1)), lienzo.getHeight() / 2);
+                    context.strokeLine(lienzo.getWidth() / 2, lienzo.getHeight() - (medida_y * i), (lienzo.getWidth() / 2) - (medida_x * (i + 1)), lienzo.getHeight() / 2);
+                    //circulo
+                    context.strokeLine((lienzo.getWidth() / 2) - (medida_x * i), 0, 0, medida_y * (i + 1));
+                    context.strokeLine((lienzo.getWidth() / 2) + (medida_x * i), 0, lienzo.getWidth(), medida_y * (i + 1));
+                    context.strokeLine((lienzo.getWidth() / 2) - (medida_x * i), lienzo.getHeight(), 0, (lienzo.getHeight()) - (medida_y * (i + 1)));
+                    context.strokeLine((lienzo.getWidth() / 2) + (medida_x * i), lienzo.getHeight(), lienzo.getWidth(), (lienzo.getHeight()) - (medida_y * (i + 1)));
+                    double medida_x3=((lienzo.getWidth()/8)*3)/v;
+                    double medida_y3=((lienzo.getHeight()/8)*3)/v;
+                    context.strokeLine(((lienzo.getWidth()/8)*1)+medida_x3*(i),((lienzo.getHeight()/8)*1)+medida_y3*(i),(lienzo.getWidth()/2)+(medida_x3*(i+1)),(lienzo.getHeight()/2)-(medida_y3*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/8)*1)+medida_x3*(i),((lienzo.getHeight()/8)*1)+medida_y3*(i),(lienzo.getWidth()/2)-(medida_x3*(i+1)),(lienzo.getHeight()/2)+(medida_y3*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/8)*1)+medida_x3*(i),((lienzo.getHeight()/8)*7)-(medida_y3*i),(lienzo.getWidth()/2)+(medida_x3*(i+1)),(lienzo.getHeight()/2)+(medida_y3*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/8)*7)-(medida_x3*i),((lienzo.getHeight()/8)*7)-(medida_y3*i),(lienzo.getWidth()/2)+(medida_x3*(i+1)),(lienzo.getHeight()/2)-(medida_y3*(i+1)));
 
                 }
                 break;
