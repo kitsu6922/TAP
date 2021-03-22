@@ -41,7 +41,7 @@ public class Controller {
                 }
             }
         });
-        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble","Lluvia de Estrellas");
+        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble","Lluvia de Estrellas","Triangulo","Sun");
         cb_opciones.setValue("Limpio");
         cb_opciones.valueProperty().addListener(new ChangeListener() {
             @Override
@@ -94,7 +94,7 @@ public class Controller {
                             context.setFill(Color.WHITE);
                             nb=true;
                         }
-                        context.fillRect(medida_x*f,medida_y*i,(medida_x*f)+medida_x,(medida_y*i)+medida_y);
+                        context.fillRect(medida_x*f,medida_y*i,medida_x,medida_y);
                     }
                     if(nb2==nb){
                         nb=!nb2;
@@ -250,8 +250,62 @@ public class Controller {
                     context.strokeLine(((lienzo.getWidth()/8)*1)+medida_x3*(i),((lienzo.getHeight()/8)*1)+medida_y3*(i),(lienzo.getWidth()/2)-(medida_x3*(i+1)),(lienzo.getHeight()/2)+(medida_y3*(i+1)));
                     context.strokeLine(((lienzo.getWidth()/8)*1)+medida_x3*(i),((lienzo.getHeight()/8)*7)-(medida_y3*i),(lienzo.getWidth()/2)+(medida_x3*(i+1)),(lienzo.getHeight()/2)+(medida_y3*(i+1)));
                     context.strokeLine(((lienzo.getWidth()/8)*7)-(medida_x3*i),((lienzo.getHeight()/8)*7)-(medida_y3*i),(lienzo.getWidth()/2)+(medida_x3*(i+1)),(lienzo.getHeight()/2)-(medida_y3*(i+1)));
+                }
+                break;
+            case 8:
+                //triangulo
+                medida_x= lienzo.getWidth()/v;
+                double medida_x2=(lienzo.getWidth()/2)/v;
+                medida_y=lienzo.getHeight()/v;
+                for(int i=0;i<v;i++){
+                    context.setStroke(Color.BLUE);
+                    context.strokeLine(medida_x*i,lienzo.getHeight(),lienzo.getWidth()-(medida_x2*(i+1)),lienzo.getHeight()-(medida_y*(i+1)));
+                    context.setStroke(Color.GREEN);
+                    context.strokeLine(lienzo.getWidth()-(medida_x*i),lienzo.getHeight(),medida_x2*(i+1),lienzo.getHeight()-(medida_y*(i+1)));
+                    context.setStroke(Color.RED);
+                    context.strokeLine(medida_x2*i,lienzo.getHeight()-(medida_y*i),(lienzo.getWidth()/2)+(medida_x2*(i+1)),medida_y*(i+1));
+                }
+                context.setStroke(Color.BLACK);
+                break;
+            case 9:
+                double mx1,my1,mx2,my2,mx3,my3;
+                mx1=(lienzo.getWidth()/3)/v;
+                my1=(lienzo.getHeight()/3)/v;
+                mx2=((lienzo.getWidth()/8)*3)/v;
+                my2=((lienzo.getHeight()/8)*3)/v;
+                mx3=(mx2/3)*2;
+                my3=(my2/3)*2;
+                for(int i=0;i<v;i++){
+                    context.setStroke(Color.GREEN);
+                    context.strokeLine(0,(lienzo.getHeight()/3)-(my1*i),mx1*(i+1),0);
+                    context.strokeLine(lienzo.getWidth(),(lienzo.getHeight()/3)-(my1*i),lienzo.getWidth()-(mx1*(i+1)),0);
+                    context.strokeLine(0,((lienzo.getHeight()/3)*2)+(my1*i),mx1*(i+1),lienzo.getHeight());
+                    context.strokeLine(lienzo.getWidth(),((lienzo.getHeight()/3)*2)+(my1*i),lienzo.getWidth()-(mx1*(i+1)),lienzo.getHeight());
+                    context.setStroke(Color.BLUE);
+                    context.strokeLine((lienzo.getWidth()/3)-(mx1*i),lienzo.getHeight()-my1*i,0,((lienzo.getHeight()/3)*2)-my1*(i+1));
+                    context.strokeLine(((lienzo.getWidth()/3)*2)+(mx1*i),my1*i,lienzo.getWidth(),(lienzo.getHeight()/3)+(my1*(i+1)));
+
+                    context.strokeLine(((lienzo.getWidth()/8)*7)-(mx2*i),lienzo.getHeight()/2,(lienzo.getWidth()/2)+(mx3*(i+1)),(lienzo.getHeight()/2)-(my3*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/8)+(mx2*i),lienzo.getHeight()/2,(lienzo.getWidth()/2)-(mx3*(i+1)),(lienzo.getHeight()/2)+(my3*(i+1)));
+                    context.setStroke(Color.RED);
+                    context.strokeLine(mx1*i,(lienzo.getHeight()/3)-(my1*i),(lienzo.getWidth()/3)+(mx1*(i+1)),0);
+                    context.strokeLine(lienzo.getWidth()-(my1*i),((lienzo.getHeight()/3)*2)+(my1*i),((lienzo.getWidth()/3)*2)-(mx1*(i+1)),lienzo.getHeight());
+
+                    context.strokeLine(lienzo.getWidth()/2,(lienzo.getHeight()/8)+(my2*i),(lienzo.getWidth()/2)-(mx3*(i+1)),(lienzo.getHeight()/2)-(my3*(i+1)));
+                    context.strokeLine(lienzo.getWidth()/2,((lienzo.getHeight()/8)*7)-(my2*i),(lienzo.getWidth()/2)+(mx3*(i+1)),(lienzo.getHeight()/2)+(my3*(i+1)));
+                    context.setStroke(Color.YELLOW);
+                    context.strokeLine(0,((lienzo.getHeight()/3)*2)-(my1*i),mx1*(i+1),(lienzo.getHeight()/3)-(my1*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/3)*2)-(mx1*i),lienzo.getHeight(),(lienzo.getWidth()/3)-(mx1*(i+1)),lienzo.getHeight()-(my1*(i+1)));
+                    context.strokeLine((lienzo.getWidth()/3)+(mx1*i),0,((lienzo.getWidth()/3)*2)+(mx1*(i+1)),my1*(i+1));
+                    context.strokeLine(lienzo.getWidth(),(lienzo.getHeight()/3)+(my1*i),lienzo.getWidth()-(mx1*(i+1)),((lienzo.getHeight()/3)*2)+(my1*(i+1)));
+
+                    context.strokeLine((lienzo.getWidth()/8)+(mx2*i),lienzo.getHeight()/2,(lienzo.getWidth()/2)-(mx3*(i+1)),(lienzo.getHeight()/2)-(my3*(i+1)));
+                    context.strokeLine(lienzo.getWidth()/2,(lienzo.getHeight()/8)+(my2*i),(lienzo.getWidth()/2)+(mx3*(i+1)),(lienzo.getHeight()/2)-(my3*(i+1)));
+                    context.strokeLine(lienzo.getWidth()/2,((lienzo.getHeight()/8)*7)-(my2*i),(lienzo.getWidth()/2)-(mx3*(i+1)),(lienzo.getHeight()/2)+(my3*(i+1)));
+                    context.strokeLine(((lienzo.getWidth()/8)*7)-(mx2*i),lienzo.getHeight()/2,(lienzo.getWidth()/2)+(mx3*(i+1)),(lienzo.getHeight()/2)+(my3*(i+1)));
 
                 }
+                context.setStroke(Color.BLACK);
                 break;
         }
     }
