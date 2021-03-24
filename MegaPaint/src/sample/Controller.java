@@ -41,7 +41,7 @@ public class Controller {
                 }
             }
         });
-        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble","Lluvia de Estrellas","Triangulo","Sun");
+        cb_opciones.getItems().addAll("Limpio","Chess","Cuadricula","Curvas","Estrella","Estrella Tapiz","Estrella Doble","Lluvia de Estrellas","Triangulo","Sun","Circulo");
         cb_opciones.setValue("Limpio");
         cb_opciones.valueProperty().addListener(new ChangeListener() {
             @Override
@@ -306,6 +306,24 @@ public class Controller {
 
                 }
                 context.setStroke(Color.BLACK);
+                break;
+            case 10:
+                double m=360/v;
+                double rx=lienzo.getWidth()/4;
+                double ry=lienzo.getWidth()/4;
+                double t=Math.toRadians(0);
+                double x=Math.round(rx*Math.cos(t));
+                double y=(ry*Math.sin(t));
+                while(t<=2*Math.PI){
+                    System.out.println(x+"  "+y+"  "+rx+"  "+ry);
+                    //context.strokeLine(0,lienzo.getHeight()/2,lienzo.getWidth(),lienzo.getHeight()/2);
+                    //context.strokeLine(lienzo.getWidth()/2,0,lienzo.getWidth()/2,lienzo.getHeight());
+                    context.strokeOval(x+lienzo.getWidth()/4,y+lienzo.getHeight()/4,lienzo.getWidth()/2,lienzo.getHeight()/2);
+                    t=t+Math.toRadians(m);
+                    x=Math.round(rx*Math.cos(t));
+                    y=(ry*Math.sin(t));
+
+                }
                 break;
         }
     }
