@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #424238;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller_Juegos">
+   <children>
+      <AnchorPane fx:id="panel_inicio" layoutX="260.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #424238; -fx-background-radius: 70;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="564.0" fitWidth="928.0" layoutX="39.0" layoutY="19.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/GemuEducatio.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="74.0" layoutY="491.0" prefHeight="44.0" prefWidth="897.0" text="Bienvenid@ a Gemu Education, esta es una plataforma de juegos educativos para " textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="532.0" prefHeight="44.0" prefWidth="897.0" text="cualquier edad con el proposito de que el estudio sea mas divertido." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_ajustes" layoutX="260.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #424238; -fx-background-radius: 70;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTextField alignment="CENTER" focusColor="#4d4d4d" labelFloat="true" layoutX="370.0" layoutY="130.0" prefHeight="39.0" prefWidth="331.0" promptText="Escuela" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff; -jfx-label-color: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="384.0" layoutY="523.0" prefHeight="42.0" prefWidth="277.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Guardar">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXRadioButton layoutX="344.0" layoutY="418.0" prefHeight="44.0" prefWidth="163.0" text="Tema Claro" textFill="WHITE">
+               <selectedColor>
+                  <Color red="0.125490203499794" green="1.0" blue="0.0470588244497776" />
+               </selectedColor>
+               <unSelectedColor>
+                  <Color red="0.3019607961177826" green="0.3019607961177826" blue="0.3019607961177826" />
+               </unSelectedColor>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton layoutX="550.0" layoutY="419.0" prefHeight="44.0" prefWidth="187.0" selected="true" text="Tema Oscruo" textFill="WHITE">
+               <selectedColor>
+                  <Color red="0.125490203499794" green="1.0" blue="0.0470588244497776" />
+               </selectedColor>
+               <unSelectedColor>
+                  <Color red="0.3019607961177826" green="0.3019607961177826" blue="0.3019607961177826" />
+               </unSelectedColor>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXRadioButton>
+            <Separator layoutX="-4.0" layoutY="306.0" prefHeight="10.0" prefWidth="1014.0" style="-fx-background-color: #20ff0c;" />
+            <Label layoutX="390.0" layoutY="321.0" text="Configuración de Sistema" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="390.0" layoutY="7.0" text="Configuración de Cuenta" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField alignment="CENTER" focusColor="#4d4d4d" labelFloat="true" layoutX="370.0" layoutY="69.0" prefHeight="39.0" prefWidth="331.0" promptText="Nombre" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff; -jfx-label-color: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" focusColor="#4d4d4d" labelFloat="true" layoutX="370.0" layoutY="197.0" prefHeight="39.0" prefWidth="331.0" promptText="Rol" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff; -jfx-label-color: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" focusColor="#4d4d4d" labelFloat="true" layoutX="370.0" layoutY="257.0" prefHeight="39.0" prefWidth="331.0" promptText="Contraseña" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff; -jfx-label-color: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_ahorcado" layoutX="250.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #424238; -fx-background-radius: 70;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox fx:id="vbox_categorias_ahorcado" alignment="TOP_CENTER" layoutX="2.0" layoutY="-4.0" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 50;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow height="44.72" radius="21.86" width="44.72" />
+               </effect>
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#cambio_panel_ahorcado_ajustes" style="-fx-background-color: #424238; -fx-background-radius: 15;" text="Agregar Categorias" textFill="#20ff0c">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="497.0" layoutY="277.0" onAction="#cambio_panel_inicio" prefHeight="71.0" prefWidth="187.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Inicio">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="814.0" layoutY="24.0" onAction="#cambio_panel_ahorcado_ajustes" prefHeight="34.0" prefWidth="72.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text=" " textAlignment="CENTER" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onDragDetected="#cambio_panel_ahorcado_ajustes" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/lista.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_ahorcado_bd" layoutX="270.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #424238; -fx-background-radius: 70;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox fx:id="vbox_categorias_ahorcadobd" alignment="TOP_CENTER" layoutX="91.0" layoutY="130.0" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 50;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label alignment="CENTER" maxHeight="30.0" maxWidth="160.0" minHeight="30.0" minWidth="160.0" prefHeight="30.0" prefWidth="160.0" text="Categorias">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <JFXTextField fx:id="tf_ahorcadobd_agcategoria" alignment="TOP_LEFT" focusColor="#4d4d4d" labelFloat="true" layoutX="290.0" layoutY="70.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="450.0" promptText="Categoria" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="395.0" layoutY="7.0" text="Agregar Categorias y Palabras" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <JFXTextField alignment="TOP_LEFT" focusColor="#4d4d4d" labelFloat="true" layoutX="290.0" layoutY="308.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="450.0" promptText="Categoria" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff;" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea focusColor="#4d4d4d" labelFloat="true" layoutX="290.0" layoutY="404.0" maxWidth="454.0" minWidth="450.0" prefHeight="186.0" prefWidth="454.0" promptText="Significado" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff};" unFocusColor="#20ff0c">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXTextArea>
+            <JFXComboBox focusColor="#4d4d4d" labelFloat="true" layoutX="290.0" layoutY="237.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="450.0" promptText="Ubicación" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff; -fx-alignment: CENTER; -fx-font-size: 18px;" unFocusColor="#20ff0c" />
+            <JFXButton buttonType="RAISED" layoutX="791.0" layoutY="78.0" onAction="#agregar_categoria" prefHeight="44.0" prefWidth="187.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 15;" text="Agregar Categoria">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="788.0" layoutY="426.0" prefHeight="44.0" prefWidth="187.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 15;" text="Agregar Palabra">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_lateral" layoutX="114.0" layoutY="114.0" prefHeight="670.0" prefWidth="250.0" style="-fx-background-color: #424238;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <effect>
+            <DropShadow height="61.74" radius="26.115000000000002" spread="0.28" width="44.72" />
+         </effect>
+         <children>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="7.0" prefHeight="45.0" prefWidth="248.0" text="JUEGOS" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="7.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="70.0" onAction="#cambio_panel_inicio" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Inicio" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/casita.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="20.0" layoutY="170.0" onAction="#cambio_panel_ahorcado" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Ahorcado" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="270.0" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Proximamente">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/precaucion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="370.0" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Proximamente">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/precaucion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="470.0" onAction="#cambio_panel_ajustes" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Ajustes">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/engrane.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="570.0" onAction="#cerrar_sesion" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #20ff0c; -fx-background-radius: 30;" text="Cerrar Sesión">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@imagenes/apagar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_superior" layoutY="-1.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="1300.0" style="-fx-background-color: #20ff0c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow height="35.83" radius="16.6725" width="32.86" />
+         </effect>
+         <children>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="1234.0" layoutY="-14.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#cerrar" prefHeight="30.0" prefWidth="39.0" text=" " textAlignment="RIGHT">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/cerraroscuro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
